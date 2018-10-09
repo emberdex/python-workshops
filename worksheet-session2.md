@@ -197,4 +197,73 @@ print(mynumber)
 
 In this case, the value of `mynumber` is whatever gets returned by `add3numbers()` - in this instance, 6.
 
-### Lists 
+### Lists
+
+Lists are a special _type_ in Python - they contain multiple items which you can access individually. You can create a list like this:
+
+```python
+fruits = ["apple", "banana", "orange", "pineapple"]
+```
+
+This creates a list, called `fruits`, with four items, `"apple"`, `"banana"`, `"orange"` and `"pineapple"`.
+
+You can get the number of items in a list using the `len()` function:
+
+```python
+fruits = ["apple", "banana", "orange", "pineapple"]
+len(fruits)
+```
+
+`len()` returns the number of items in a list, in this case `len()` returns 4.
+
+If you want to add an item to a list, you can use the `append()` _method_ on your list, like so:
+
+```python
+fruits.append("tangerine")
+```
+
+This will add "tangerine" to the end of the list.
+
+### Loops
+Loops are used to run pieces of code repeatedly under certain conditions. Python has two types of loop: the `for` loop and the `while` loop.
+
+A `for` loop allows you to run a piece of code for each item in a list. This is called _iterating_ over a list. You can use the list of fruits from earlier in a for loop, like so:
+
+```python
+fruits = ["apple", "banana", "orange", "pineapple"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+`fruits` is the name of the list you want to _iterate_ over, and `fruit` is the name of the "current" item in the list. This code would output the following:
+```
+apple
+banana
+orange
+pineapple
+```
+
+If you want to run a piece of code a given number of times, you can do so using the `range()` function:
+
+```python
+for i in range(100):
+    print(i)
+```
+
+This will print all of the numbers from 0 to 100.
+
+A `while` loop allows a piece of code to run while a certain condition is true, much like an `if` statement. For example, you could print all of the numbers from 0 to 100 using a while loop instead of a for loop:
+
+```python
+current_number = 0
+
+while current_number <= 100:
+    print(current_number)
+    current_number = current_number + 1
+```
+
+The code continues to run while the condition in the `while` statement is true. Because we add one to the number every time, the code will eventually stop running when `current_number` becomes greater than 100.
+
+Be careful - if the condition in your while loop is always true, your code will run infinitely. Don't worry if this happens - if you get stuck in a loop, you can just press `Control-C` on your keyboard to stop your program from running.
+
