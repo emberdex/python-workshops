@@ -193,7 +193,7 @@ myfunction(3)
 
 Note the "`number`" inside the brackets. This automatically creates a variable, called `number`, for you to use inside that function. You pass in the number by putting it between the brackets when you call the function.
 
-Additionally, the use of the `str()` function is so that Python knows we want to convert the number that's being passed to `myfunction` should be treated as a string.
+Additionally, the the `str()` function converts a `number` to a `string` - this allows us to combine it with another string.
 
 You can also have multiple _arguments_ by separating them with commas, like so:
 
@@ -271,7 +271,7 @@ for i in range(100):
     print(i)
 ```
 
-This will print all of real numbers below 100.
+This will print all real numbers below 100.
 
 A `while` loop allows a piece of code to run while a certain condition is true, much like an `if` statement. For example, you could print all of the numbers from 0 to 100 using a while loop instead of a for loop:
 
