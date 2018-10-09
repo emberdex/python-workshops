@@ -94,8 +94,8 @@ Examples of some operators you can use are:
 - Division - `/`
 - Modulus - `%`
     - The modulus operator returns the remainder of a division.
-    - For example, `10 % 3` would return 1, because `10` divided by `3` would give you 3 with 1 number "left over".
-- Powers - `**`
+    - For example, `10 % 3` would return 1, because `10` divided by `3` would give you 3 with a remainder of 1.
+- Exponents (Powers) - `**`
     - For example, `3 ** 2` would return 9, because 3 to the power of 2 is 9.
 
 ### Conditional programming (if statements)
@@ -204,7 +204,7 @@ def myfunction(number1, number2):
 myfunction(1, 2)
 ```
 
-Functions can also _return_ values, which you can then assign to variables. This is useful if you want a function to do something for you:
+Functions can also _return_ a value as its output. You can assign the output to a variable. This is useful if you want to use the result of a function for something else:
 
 ```python
 def add3numbers(number1, number2, number3):
@@ -256,7 +256,7 @@ for fruit in fruits:
     print(fruit)
 ```
 
-`fruits` is the name of the list you want to _iterate_ over, and `fruit` is the name of the "current" item in the list. This code would output the following:
+`fruits` is the name of the list you want to _iterate_ over, and `fruit` is the name of the "current" item in the list being iterated over. This code would output the following:
 ```
 apple
 banana
