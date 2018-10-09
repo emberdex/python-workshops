@@ -12,8 +12,7 @@ In this session, we'll cover the following concepts:
 - Lists
 - Loops (for, while loops)
 - String operations
-- Error handling and exceptions
-- Decorators
+- Error handling
 
 We covered some of these in lesson 1, but it's important to recap.
 If you need help at any point, then raise your hand or ask a mentor - they'll be more than happy to help!
@@ -267,3 +266,63 @@ The code continues to run while the condition in the `while` statement is true. 
 
 Be careful - if the condition in your while loop is always true, your code will run infinitely. Don't worry if this happens - if you get stuck in a loop, you can just press `Control-C` on your keyboard to stop your program from running.
 
+### String operations
+
+There are some operations you can do on strings (text) that might come in useful.
+
+One operation you can do is checking if your string contains certain text - this is called checking for a _substring_ (a string within a string).
+
+In Python, you can do it like this:
+
+```python
+mystring = "This is a quick test."
+
+if "quick" in mystring:
+    print("Speedy!")
+```
+
+We're using the `in` keyword to check if `"quick"` is contained in `mystring` - in this case, it is, so the condition is true and our code can run. You can also use `in` with lists, to check if a list contains an item.
+
+Another operation you can do is combining strings together - this is called _concatenation_.
+
+In Python, you can do it using the `+` operator:
+
+```python
+mystring = "Hello " + "World!"
+print(mystring)
+```
+
+This code will print `Hello World!` to the screen.
+
+### Error handling
+Sometimes, when running our Python code, errors can occur which require our attention. For example, if we try to divide a number by zero:
+
+```python
+myvariable = 3 / 0
+```
+
+Our code will crash with the following error:
+
+`ZeroDivisionError: division by zero`
+
+We can catch this error using a `try` block:
+
+```python
+myvariable = 0
+try:
+    myvariable = 3 / 0
+```
+
+Note that you need to declare any variables you want to create **outside** of the try block, otherwise you can't access them when the block finishes.
+
+This code won't work on its own - each `try` block needs its own corresponding `except` block:
+
+```python
+myvariable = 0
+try:
+    myvariable = 3 / 0
+except ZeroDivisionError:
+    print("You tried to divide by zero")
+```
+
+This catches any `ZeroDivisionError` when one occurs - the code inside the `except` block is run if the code inside the `try` block _throws_ an error.
