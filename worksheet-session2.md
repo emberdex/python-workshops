@@ -37,7 +37,7 @@ To follow these instructions, you need to have Python 3 installed on your comput
 
 If you have trouble with any of this, feel free to ask a mentor for help!
 
-### Hello World, or writing your first line of code
+### Hello World, or writing your first line of code
 
 When learning a new programming language, the first line of code you'll write is "Hello World" - a simple program which just prints "Hello World" to the screen.
 
@@ -161,7 +161,7 @@ else:
 
 In this case, you would see "My value is not 5" on the screen, because the condition is not true. If you were to change `myvalue` to 5, you would see "My value is 5".
 
-### Functions
+### Functions
 
 Functions are blocks of code you can reuse over and over again, to avoid repeating yourself. In fact, you've been using one throughout this worksheet - `print()` is a function!
 
