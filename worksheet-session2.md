@@ -186,12 +186,14 @@ You can also _pass_ values to a function, by declaring it like so (these are cal
 
 ```python
 def myfunction(number):
-    print("My number is " + number)
+    print("My number is " + str(number))
 
 myfunction(3)
 ```
 
 Note the "`number`" inside the brackets. This automatically creates a variable, called `number`, for you to use inside that function. You pass in the number by putting it between the brackets when you call the function.
+
+Additionall, the use of the `str()` function is so that Python knows we want to convert the number that's being passed to `myfunction` should be treated as a string.
 
 You can also have multiple _arguments_ by separating them with commas, like so:
 
