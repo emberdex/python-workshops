@@ -271,14 +271,14 @@ for i in range(100):
     print(i)
 ```
 
-This will print all positive integers below 100, including 0.
+This will print all positive integers below 100, including 0. Note that `range()` counts from zero - the code will still run 100 times, but it will return numbers from 0 to 99.
 
 A `while` loop allows a piece of code to run while a certain condition is true, much like an `if` statement. For example, you could print all of the numbers from 0 to 100 using a while loop instead of a for loop:
 
 ```python
 current_number = 0
 
-while current_number <= 100:
+while current_number < 100:
     print(current_number)
     current_number = current_number + 1
 ```
