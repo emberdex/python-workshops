@@ -18,6 +18,25 @@ We covered some of these in lesson 1, but it's important to recap.
 If you need help at any point, then raise your hand or ask a mentor - they'll be more than happy to help!
 Important keywords are in _italics_ - it can be helpful to remember these.
 
+### Getting started with Python
+If you've already managed to get Python working on your computer, you can skip this.
+
+To follow these instructions, you need to have Python 3 installed on your computer, as well as a text editor if you're on Mac or Linux (we recommend Visual Studio Code).
+
+**If you're on Windows:**
+- Press Start, and look for a program called IDLE. Open it - you'll get a white window with some text in it.
+- At the top, click File > New - you'll get another window, where you'll type your code in.
+- Save this empty file somewhere, making sure the name of the file has .py at the end of it.
+- To run your code, press F5 on your keyboard, or click Run > Run Module.
+
+**If you're on a Mac or Linux**
+- Open Visual Studio Code, and create a new file by clicking File > New.
+- Save this empty file somewhere, making sure the name of the file has .py at the end of it.
+- You might be prompted to install the 'Python' extension - do so, and click Reload when it finishes. Visual Studio Code will restart.
+- To run your code, in the menu bar, click Debug > Start Without Debugging. A window will appear at the bottom of Visual Studio Code with your code's output in it.
+
+If you have trouble with any of this, feel free to ask a mentor for help!
+
 ### Hello World, or writing your first line of code
 
 When learning a new programming language, the first line of code you'll write is "Hello World" - a simple program which just prints "Hello World" to the screen.
