@@ -8,9 +8,9 @@ In this session, we'll cover the following concepts:
 - Variables and types
 - Math operations
 - Conditional programming (if statements)
-- Loops (for, while loops)
 - Functions
 - Lists
+- Loops (for, while loops)
 - String operations
 - Error handling and exceptions
 - Decorators
@@ -26,7 +26,7 @@ When learning a new programming language, the first line of code you'll write is
 In Python, such a program might look something like this:
 
 ```python
-print("Hello World!)
+print("Hello World!")
 ```
 
 If you run this program and it works, congratulations! You just wrote your very first line of Python code. If not, don't worry - refer back to the "Getting Started" section of this worksheet for some pointers on getting Python set up on your computer.
@@ -144,3 +144,57 @@ else:
 In this case, you would see "My value is not 5" on the screen, because the condition is not true. If you were to change `myvalue` to 5, you would see "My value is 5".
 
 ### Functions
+
+Functions are blocks of code you can reuse over and over again, to avoid repeating yourself. In fact, you've been using one throughout this worksheet - `print()` is a function!
+
+To create your own function, you _declare_ it like this:
+
+```python
+def myfunction():
+    print("This is my function!")
+```
+
+The `def` keyword tells Python that the code that follows is a function. In this case, our function is called `myfunction`.
+
+You can then _call_ these functions like so:
+
+```python
+myfunction()
+```
+
+This will run the code inside your function.
+
+You can also _pass_ values to a function, by declaring it like so (these are called _arguments_):
+
+```python
+def myfunction(number):
+    print("My number is " + number)
+
+myfunction(3)
+```
+
+Note the "`number`" inside the brackets. This automatically creates a variable, called `number`, for you to use inside that function. You pass in the number by putting it between the brackets when you call the function.
+
+You can also have multiple _arguments_ by separating them with commas, like so:
+
+```python
+def myfunction(number1, number2):
+    print(number1 + number2)
+
+myfunction(1, 2)
+```
+
+Functions can also _return_ values, which you can then assign to variables. This is useful if you want a function to do something for you:
+
+```python
+def add3numbers(number1, number2, number3):
+    result = number1 + number2 + number3
+    return result
+
+mynumber = add3numbers(1, 2, 3)
+print(mynumber)
+```
+
+In this case, the value of `mynumber` is whatever gets returned by `add3numbers()` - in this instance, 6.
+
+### Lists 
