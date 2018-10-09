@@ -271,7 +271,7 @@ for i in range(100):
     print(i)
 ```
 
-This will print all of the numbers from 0 to 100.
+This will print all of real numbers below 100.
 
 A `while` loop allows a piece of code to run while a certain condition is true, much like an `if` statement. For example, you could print all of the numbers from 0 to 100 using a while loop instead of a for loop:
 
