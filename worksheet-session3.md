@@ -10,6 +10,7 @@ In this session, we'll cover:
 - What is Flask?
 - Setting up a simple Flask project and responding to requests
 - Templates
+- URL variables
 
 ### Getting started with Python
 If you've already managed to get Python working on your computer, you can skip this.
@@ -193,4 +194,27 @@ You can see that in the `render_template()` function, we pass in three arguments
 - Our name. We use `name=my_name` so that inside the template, when we use the `name` variable, it has the value of `my_name`.
 - A list of our hobbies, with the name `hobbies`.
 
-If you run this code and go to the same link again, you can see that the values we've passed in are displayed on the webpage. Feel free to experiment by changing the template and your Flask code to get a better understanding of how templates work.
+If you run this code and go to the same link again, you can see that the values we've passed in are displayed on the webpage. Feel free to experiment by changing the template and your Flask code to get a better understanding of how templates work. Keep in mind that you'll need to restart your code every time you make a change to a file for that change to take effect.
+
+### URL variables
+
+Flask allows you to add values to the URL, which you can then use inside your templates. To do this, you need to make some changes to your code, firstly starting with how you declare your function:
+
+```python
+@app.route('/<my_name>')
+def hello_world(my_name):
+```
+
+The extra part after the `/` in `@app.route()` tells the router that anything past that `/` should be treated as a value. You then need to add a function argument, so that the router can pass that value into your function.
+
+Because we've now moved this value to the URL, we can remove the declaration of `my_name` in our function. The final code should look something like this:
+
+```python
+@app.route('/<my_name>')
+def hello_world(my_name):
+    my_hobbies = ["Programming", "Music", "Photography", "Watching films"]
+
+    return render_template("hello.html", name=my_name, hobbies=my_hobbies)
+```
+
+Restart your script and try to use the same link you used before to view your webpage. You'll get an error - this is fine, you just need to change the URL so that your value is there. For example, your URL might be `http://localhost:5000/Toby`.
