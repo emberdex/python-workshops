@@ -9,6 +9,7 @@ In this session, we'll cover:
 - How to install & use libraries in Python (`pip`)
 - What is Flask?
 - Setting up a simple Flask project and responding to requests
+- Templates
 
 ### Getting started with Python
 If you've already managed to get Python working on your computer, you can skip this.
@@ -137,3 +138,59 @@ if __name__ == "__main__":
 ```
 
 Finally, run your app - if there are no errors, you should see some output in the console, and your app will keep running. At this point, you can open a web browser and go to [`http://localhost:5000`](http://localhost:5000) (or, if you're reading this online, clicking that link should do the trick). You should see a white page with "Hello World!" on it - if so, your code is working fine! If not, then don't worry - mentors are on hand to help you, and sometimes getting Flask to work can be tricky.
+
+Once you've finished with this section, press Control + C to stop your program from running. Keep the file you've written, as it'll be helpful for the next segment of this session.
+
+### Templates
+
+Templates are just like normal webpages, except you can substitute values and variables into them from your Python code. This is very useful for webpages that have content which might change if, for example, the time of day changes.
+
+To start creating templates, find where you've saved your script and create a new folder in the same place called "templates" (all lower case). Then, inside a new folder, create a new file called "hello.html".
+
+Paste the following code into "hello.html":
+
+```html
+<html>
+    <head>
+        <title>Hello World!</title>
+    </head>
+    <body>
+        <h1>Hi! My name is {{ name }}.</h1>
+        <p>My hobbies include:</p>
+        <ul>
+            {% for hobby in hobbies %}
+                <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+```
+
+(For now, don't worry about what this code does. We'll cover that next session.)
+
+Next, we'll need to import the function that lets us use templates. Change your import line to look something like this:
+
+```python
+from flask import Flask, render_template
+```
+
+Next, we'll change our endpoint to use our template, passing in our name and a list of our hobbies to be displayed on the webpage:
+
+```python
+@app.route('/')
+def hello_world():
+    my_name = "Toby"
+    my_hobbies = ["Programming", "Music", "Photography", "Watching films"]
+
+    return render_template("hello.html", name=my_name, hobbies=my_hobbies)
+```
+
+(Change the values in your code to match your actual name and hobbies, unless by some coincidence your name is Toby and you enjoy programming, music, photography and watching films.)
+
+You can see that in the `render_template()` function, we pass in three arguments:
+
+- The name of our template, in this case, `hello.html`.
+- Our name. We use `name=my_name` so that inside the template, when we use the `name` variable, it has the value of `my_name`.
+- A list of our hobbies, with the name `hobbies`.
+
+If you run this code and go to the same link again, you can see that the values we've passed in are displayed on the webpage. Feel free to experiment by changing the template and your Flask code to get a better understanding of how templates work.
