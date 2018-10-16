@@ -29,6 +29,9 @@ To follow these instructions, you need to have Python 3 installed on your comput
 - You might be prompted to install the 'Python' extension - do so, and click Reload when it finishes. Visual Studio Code will restart.
 - To run your code, in the menu bar, click Debug > Start Without Debugging. A window will appear at the bottom of Visual Studio Code with your code's output in it.
 
+**If you get a permissions error**
+- Try running it with the `--user` flag. For example: `pip install --user flask`
+
 If you have trouble with any of this, feel free to ask a mentor for help!
 
 ### How to install & use libraries in Python (`pip`)
